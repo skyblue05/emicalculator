@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate EMI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="app">
+            <h1>EMI and Interest Calculator</h1>
+            <label for="principle">Principle:</label>
+            <input v-model="principle" type="number" />
+
+            <label for="rate">Rate (% per annum):</label>
+            <input v-model="rate" type="number" />
+
+            <label for="time">Time (years):</label>
+            <input v-model="time" type="number" />
+
+            <button @click="calculateResults">Submit</button>
+            <div id="result">
+                <p>Simple Interest: {{ simpleinterest.toFixed(2) }}</p>
+                <br>
+                <p>EMI: {{ emi.toFixed(2) }}</p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;">
+        &copy; 2023 Created by <a href="https://www.linkedin.com/in/akash-balasaheb-borude/" target="_blank"
+            style="color: White !important;">Akash</a> . 
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
